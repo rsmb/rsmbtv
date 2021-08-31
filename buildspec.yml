@@ -8,10 +8,10 @@ phases:
       - "npm install -g gatsby"
   pre_build:
     commands:
-      - "npm install"
+      - "npm ci --production"
   build:
     commands:
-      - "npm run build"
+      - "npm run-script build"
   post_build:
     commands:
       - 'aws s3 sync "public/" "s3://BUCKET" --delete --acl "public-read"'
