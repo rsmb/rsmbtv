@@ -3,8 +3,9 @@ import "@fontsource/atkinson-hyperlegible"
 
 // styles
 const pageStyles = {
-  color: "#232129",
+  color: "#444",
   padding: 96,
+  backgroundColor: "#EEEEEE",
   fontFamily: "-apple-system, Atkinson Hyperlegible, Roboto, sans-serif, serif",
 }
 const headingStyles = {
