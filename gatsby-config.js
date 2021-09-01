@@ -1,3 +1,7 @@
+const targetAddress = new URL(
+  process.env.TARGET_ADDRESS || `http://blog.rsmb.tv`
+);
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.rsmb.tv",
@@ -30,6 +34,23 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: "gatsby-plugin-s3",
+      options: {
+        bucketName: process.env.TARGET_BUCKET_NAME || "fake-bucket",
+        region: process.env.AWS_REGION,
+        protocol: targetAddress.protocol.slice(0, -1),
+        hostname: targetAddress.hostname,
+        acl: null,
+        params: {},
+      },
+    },
+    {
+      resolve: "gatsby-plugin-canonical-urls",
+      options: {
+        siteUrl: targetAddress.href.slice(0, -1),
+      },
     },
   ],
 };
