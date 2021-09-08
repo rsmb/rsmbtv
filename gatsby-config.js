@@ -1,11 +1,11 @@
 const targetAddress = new URL(
-  process.env.TARGET_ADDRESS || `http://blog.rsmb.tv`
+  process.env.TARGET_ADDRESS || `https://www.rsmb.tv`
 );
 
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.rsmb.tv",
-    title: "rsmbtv",
+    title: "rsmb.tv",
   },
   plugins: [
     "gatsby-plugin-image",
@@ -13,7 +13,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/images/favicon-32x32.png",
       },
     },
     "gatsby-plugin-mdx",

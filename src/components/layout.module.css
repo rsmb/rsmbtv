@@ -1,0 +1,9 @@
+.container {
+  margin: auto;
+  max-width: 500;
+  font-family: "-apple-system, Atkinson Hyperlegible, Roboto, sans-serif, serif";
+}
+
+.heading {
+  color: rebeccapurple;
+}
